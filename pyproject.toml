@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "agentx"
+version = "0.1.0"
+description = ""
+authors = ["rohanraghuwanshi <rohanraghuvanshi001@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+uagents =  { version = "0.11.1", python = ">=3.9.19,<3.13" }
+solana = "^0.34.3"
+requests = "^2.32.3"
+base58 = "^2.1.1"
+mnemonic = "^0.21"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
