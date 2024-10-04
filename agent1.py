@@ -7,7 +7,7 @@ from usdc_helper import get_usdc_amount_for_sol, transfer_usdc
 
 
 # Seed phrase used to derive the wallet keypair for the agent
-seed_phrase = "<ENTER-SEED-PHRASE-HERE>"
+seed_phrase = ("<ENTER-SEED-PHRASE-HERE>")
 
 
 # Define the request model for the swap order
@@ -40,6 +40,7 @@ wallet: Dict[str, Any] = derive_keypair_from_seed_phrase(seed_phrase, 0)
 @agent.on_event("startup")
 async def start_agent(ctx: Context):
     # Agent is initialized, log its address
+    ctx.storage.set("orders", {})
     ctx.logger.info(f"Agent 1 initialized with address: {agent.address}")
 
 
